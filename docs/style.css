@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #e8dcc4 0%, #d4c4a8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.paper {
+    max-width: 800px;
+    width: 100%;
+    background: #f9f6f0;
+    padding: 3rem;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        inset 0 0 100px rgba(245, 235, 220, 0.3);
+    border: 1px solid #d4c4a8;
+    position: relative;
+}
+
+.paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 31px,
+            rgba(200, 180, 150, 0.15) 31px,
+            rgba(200, 180, 150, 0.15) 32px
+        );
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2c2416;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #5a4e3f;
+    font-style: italic;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.demo-section {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 3px solid #8b7355;
+    text-align: center;
+}
+
+.question {
+    font-size: 1.3rem;
+    color: #5a4e3f;
+    margin-bottom: 1rem;
+}
+
+.answer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c2416;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.answer.friday {
+    color: #2d7a3e;
+}
+
+.answer.not-friday {
+    color: #8b4513;
+}
+
+.about {
+    margin-top: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c2416;
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid #d4c4a8;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #3a3020;
+    margin: 1.5rem 0 0.8rem;
+}
+
+p {
+    line-height: 1.8;
+    color: #3a3020;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    line-height: 1.8;
+    color: #3a3020;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+pre {
+    background: rgba(60, 50, 40, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border: 1px solid #d4c4a8;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    color: #3a3020;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .paper {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .answer {
+        font-size: 2rem;
+    }
+}
